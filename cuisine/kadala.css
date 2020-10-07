@@ -1,0 +1,358 @@
+/*removes browser default margins and padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*set the default font size, font family, font color, and page color*/
+body {
+    font-size: 16px;
+    Font-Family: 'Source Sans Pro', Sans-Serif;
+    background-color: black;
+    color: #141A21;
+}
+
+/*set sizes for primary and secondary headers*/
+h1,
+h2 {
+    font-family: 'Bitter', serif;
+    Font-Size: 1.75em;
+    color: #141A21;
+    padding-left: 215px;
+    padding-top: .25em;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #30a2cc;
+    padding-bottom: .5em;
+}
+
+/*set the paragraph font size and adds a bottom border to all paragraphs*/
+p {
+    font-size: .85em;
+    margin: 1em;
+    border-bottom: 1px solid #d7d9db;
+    padding-bottom: .75em;
+}
+
+/*link color and hover state for links in paragraphs*/
+p a {
+    color: #FF3600;
+}
+
+p a:hover {
+    text-decoration: none;
+}
+
+/*creates the centered div with a white background full width for screens less then 650px*/
+#container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+/*class used for orange bars at the top and bottome of the page*/
+.orangeBar {
+    background-color: #FF3600;
+    height: .5em;
+}
+
+/*responsive youtube class with descending selectors as well discovered at this site: https://avexdesigns.com/responsive-youtube-embed/*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 90px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position:absolute;
+    top: 500;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*id that turns the unordered list into a table based on CSS from http://www.seriouseats.com/recipes/2016/10/sous-vide-leg-of-lamb-mint-cumin-black-mustard-recipe.html*/
+#yieldTime {
+    display: table;
+    table-layout: fixed;
+    list-style-type: none;
+    width: 100%;
+    margin: 1.25em auto 0;
+    line-height: 2.25;
+    font-size: .875em;
+}
+
+/*this bit creates and positions the / between each part of the yield and time*/
+#yieldTime li:before {
+    content: "/";
+    position: absolute;
+    right: -.23em;
+    font-size: 2.25em;
+    font-weight: 400;
+    color: #d7d9db;
+    padding: 0;
+}
+
+/*removes the / after the third <li> in the group*/
+#yieldTime li:last-child:before {
+    content: "";
+}
+
+/*the next three classes style the elements between the slashes in the yieldTime*/
+.yieldCell {
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    padding: 0 1.375em;
+}
+
+.label {
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+}
+
+.info {
+    font-weight: 400;
+    display: block;
+}
+
+/*the following selectors are for the instructions portion of the recipe which is an unordered list at first working on the general layout of the list*/
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: .95em;
+    margin-left: 0;
+    padding: 0;
+}
+
+ul li {
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+
+ul li:last-child {
+    padding-bottom: 0;
+}
+
+/*next are the "instructions" classes are used to turn the list into a table, with rows and cells to separate and style the number, text, and image*/
+.instructionsBox {
+    display:fixed;
+    table-layout:inherit;
+    width: 98%;
+    padding: 2;
+    list-style-type: none;
+    margin: 0;
+    margin-right: 2%;
+}
+
+.instructionItems {
+    display: table;
+    padding-bottom: 1em;
+}
+
+.instructionNumber {
+    display: table-cell;
+    width: 5%;
+    vertical-align: top;
+    padding: 0 0 0 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.875em;
+}
+
+.instructionText {
+    display: table-cell;
+    padding: 0 1em 2em;
+    vertical-align: text-bottom;
+    margin-left: 7em;
+    font-size: 1.125em;
+    text-align: center;
+    
+}
+
+.instructionImage {
+    width: 30%;
+    display: table-cell;
+    max-width: 200px;
+    vertical-align: top;
+    padding: 0;
+    padding-bottom: 2em;
+    margin: 0;
+    line-height: .5em;
+}
+
+/*these selectors style the calorie table*/
+table {
+    width: 96%;
+    margin: 0 2%;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.25;
+    font-weight: 600;
+    padding-bottom: .5em;
+}
+
+tr:nth-of-type(even) {
+    margin: 0;
+    background-color: #F1EFED;
+}
+
+td {
+    padding-left: .5em;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/*minor fix to spacing of the last item in the calorie list*/
+.last {
+    padding-bottom: .5em;
+}
+
+/*restyling the totals at the bottom of the calorie list*/
+.total {
+    background-color: #ffffff;
+    padding-left: 0;
+    border-top: 1px solid #f1efed;
+    font-size: 1.75;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    padding-top: .5em;
+}
+
+/*restyling of the comment at bottom of the calorie list*/
+#comment {
+    padding-left: 1em;
+    font-style: italic;
+    font-size: .85em;
+    padding-bottom: 1.75em;
+}
+
+/*restyling of the input button*/
+form {
+    text-align: center;
+    margin: 2em 0;
+}
+
+input[type=submit] {
+    border: 2px solid #FF3600;
+    padding: .75em;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: #FF3600;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+input[type=submit]:hover {
+    background-color: #FF3600;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+    color: #ffffff;
+    cursor: pointer;
+}
+.menu-bar{
+    background:black;
+    text-align:center;
+    
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+
+.menu-bar ul li
+{
+    width: 180px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+  .menu-bar ul li:hover{
+    background: #2bab0d;
+    border-radius: 3px;
+    
+
+
+      
+      
+      
+      
+    
+}
+
+
+.menu-bar .fa
+{
+    margin-right: 8px;
+}
+
+.sub-menu-1
+{
+    display:none;
+    
+}
+
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position:absolute;
+    background:black;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin:10 px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 180px;
+    padding: 1px;
+    border-bottom: 1px dotted #fff;
+    background:solid;
+    border-radius:0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+
+{
+    border-bottom: none;
+    
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color: darkblue;
+}

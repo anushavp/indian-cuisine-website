@@ -1,0 +1,155 @@
+<html>
+<title>contact</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel = "stylesheet" href = "contact.css">
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, html {height: 100%}
+h1,p1,p2,p3 {font-family:"Lucida Console",monospace;font-size:20px; color: black;}
+
+
+</style>
+    <body>
+    <!-- Navbar (sit on top) -->
+ <div class ="menu-bar">
+     <ul>
+         <li><a href="index.html">MAIN</a></li>
+         <li class= "active" ><a href ="home.html"><i class="fa fa-home" ></i>HOME</a></li>
+        
+         
+         
+         
+         <li><a href = "#"><i class="fa fa-caret-square-o-down"></i>FOOD STREETS</a>
+         
+          <div class="sub-menu-1">
+             <ul>
+                <li><a href="bangalore.html">Bangalore</a></li>
+             <li><a href="goa.html">Goa</a></li>
+             <li><a href="#">Chennai</a></li>
+             <li><a href="#">Pondicherry</a></li>
+             
+             
+             </ul>
+             </div>
+         
+         <li ><a href = "#"><i class="fa fa-cutlery" ></i>CUISINES</a>
+             
+             
+             
+             
+         <div class="sub-menu-1">
+             <ul>
+                <li><a href="north.html">North Indian</a></li>
+             <li><a href="#">Western Indian</a></li>
+             <li><a href="east.html">Eastern Indian</a></li>
+             <li><a href="south.html">South Indian</a></li>
+             
+             
+             </ul>
+             </div>
+          </li>
+        
+         
+         
+         
+         
+         
+         
+        
+           
+              </ul>
+       </div>
+       
+
+    <!-- Contact -->
+<div class="w3-container w3-padding-30">
+  <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:100px"></h1>
+    
+      <p class="w3-xxlarge w3-padding-20 w3-black w3-center w3-border "><span class="w3-xxlarge"> FEEDBACK</span></p>
+      <p3 class="w3-xxlarge w3-padding-20 w3-black w3-border "><strong> HEY FOODIES!!!</strong></p3>
+          <br>
+          <p2 class="w3-xxlarge w3-padding-20 w3-black w3-border "><span class="w3-xxlarge"> HOPE YOU ENJOYED VISITING OUR WEBSITE</span></p2>
+      <br>
+      <p4 class="w3-xxlarge w3-padding-18 w3-border w3-black">SEND A FEEDBACK OR SUGGESTION</p4>
+    
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="email" required name="email"></p>
+      
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+   
+  </div>
+</div>
+    
+    <script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+        
+        
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="logo.jpg">
+				<h3>Indian<span>CUISINES</span></h3>
+
+				<p class="footer-links">
+					
+					
+					<a href="aboutus.html">About</a>
+					|
+					<a href="">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2019 INDIAN CUISINES</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>alpha college
+						 hennur baglur main road</span>
+						Bangalore-960054</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 8296598887</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="anushavp97@yahoo.com">anushavp97@yahoo.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the site</span>
+					exploring .</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>goa</title>
+      <link rel="stylesheet" href="goa.css">
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+</head>
+<body>
+    
+     <div class ="menu-bar">
+       <ul>
+           <li><a href ="index.html">MAIN</a></li>
+         <li class= "active" ><a href ="home.html"><i class="fa fa-home" ></i>HOME</a></li>
+         <li><a href = "#"><i class="fa fa-caret-square-o-down"></i>FOOD STREETS</a>
+         
+          <div class="sub-menu-1">
+             <ul>
+                <li><a href="bangalore.html">Bangalore</a></li>
+             
+             <li><a href="goa.html">Goa</a></li>
+                 <li><a href="chennai.html">Chennai</a></li>
+             <li><a href="pondi.html">Pondicherry</a></li>
+             
+             
+             </ul>
+             </div>
+              </li>
+           
+           
+           
+           
+           
+           <li ><a href = "#"><i class="fa fa-cutlery" ></i>CUISINES</a>
+     <div class="sub-menu-1">
+             <ul>
+                <li><a href="north.html">North Indian</a></li>
+                <li><a href="west.html">Western Indian</a></li>
+                <li><a href="east.html">Eastern Indian</a></li>
+                <li><a href="south.html">South Indian</a></li>
+             
+             
+             </ul>
+              </div>
+          </li>
+       
+              </ul>
+       </div>
+      <div class="slide active">
+            <div class="card">
+                  <div class="card-img" id="img01"></div>
+                  <div class="card-content">
+                        <p class="card-theme">Goa</p>
+                        <h2 class="card-header">Church</h2>
+                        <p class="card-para">Goa  is a state on the southwestern coast of India within the region known as the Konkan, and geographically separated from the Deccan highlands by the Western Ghats.[5] It is surrounded by the Indian states of Maharashtra to the north and Karnataka to the east and south, with the Arabian Sea forming its western coast.</p>
+                  <a class="card-link">Read</a>
+                  </div>
+            </div>
+      </div>
+      <div class="slide">
+            <div class="card">
+                  <div class="card-img" id="img02"></div>
+                  <div class="card-content">
+                        <p class="card-theme">Goa</p>
+                        <h2 class="card-header">beach</h2>
+                        <p class="card-para">Calangute and Baga are two adjoining beaches that are definitely the most happening beaches of Goa. The coastal shelf is gradual and dere are several food joints. There are hundreds of snacks lining these beaches and tons of places to stay as well.</p>
+                  <a class="card-link">Read</a>
+                  </div>
+            </div>
+      </div>
+      <div class="slide">
+            <div class="card">
+                  <div class="card-img" id="img03"></div>
+                  <div class="card-content">
+                        <p class="card-theme">Goa</p>
+                        <h2 class="card-header">Madgaon</h2>
+                        <p class="card-para">Oyster is the common name for a number of different families of salt-water bivalve molluscs that live in marine or brackish habitats. In some species the valves are highly calcified, and many are somewhat irregular in shape.</p>
+                  <a class="card-link">Read</a>
+                  </div>
+            </div>
+      </div>
+      <div class="prevnext">
+            <button class="pn-btn" id="prev"></button>
+            <button class="pn-btn" id="next"></button>
+      </div>
+      <script type="text/javascript">
+
+      var $activeSlide = $('.active'),
+      $homeSlide = $(".slide"),
+      $slideNavPrev = $("#prev"),
+      $slideNavNext = $("#next");
+
+      function init() {
+            TweenMax.set($homeSlide.not($activeSlide), {autoAlpha: 0});
+            TweenMax.set($slideNavPrev, {autoAlpha: 0.2});
+      }
+
+      init();
+
+      function goToNextSlide(slideOut, slideIn, slideInAll) {
+            var t1 = new TimelineLite(),
+            slideOutContent = slideOut.find('.card-content'),
+            slideInContent = slideIn.find('.card-content'),
+            slideOutImg = slideOut.find('.card-img'),
+            slideInImg = slideIn.find('.card-img'),
+            index = slideIn.index(),
+            size = $homeSlide.length;
+            console.log(index);
+
+            if(slideIn.length !== 0) {
+            t1
+            .set(slideIn, {autoAlpha: 1, className: '+=active'})
+            .set(slideOut, {className: '-=active'})
+            .to(slideOutContent, 0.65, {y: "+=40px", ease: Power3.easeInOut}, 0)
+            .to(slideOutImg, 0.65, {backgroundPosition :'bottom', ease: Power3.easeInOut}, 0)
+            .to(slideInAll, 1, {y: "-=100%", ease: Power3.easeInOut}, 0)
+            .fromTo(slideInContent, 0.65, {y: '-=40px'}, {y : 0, ease: Power3.easeInOut}, "-=0.7")
+            .fromTo(slideInImg, 0.65, {backgroundPosition: 'top'}, {backgroundPosition: 'bottom', ease: Power3.easeInOut}, '-=0.7')
+            }
+
+            TweenMax.set($slideNavPrev, {autoAlpha: 1});
+
+            if(index === size - 1){
+                  TweenMax.to($slideNavNext, 0.3, {autoAlpha: 0.2, ease:Linear.easeNone});
+            }
+      };
+
+      $slideNavNext.click(function(e) {
+            e.preventDefault();
+
+            var slideOut = $('.slide.active'),
+            slideIn = $('.slide.active').next('.slide'),
+            slideInAll = $('.slide');
+
+            goToNextSlide(slideOut, slideIn, slideInAll);
+
+      });
+
+      function goToPrevSlide(slideOut, slideIn, slideInAll) {
+            var t1 = new TimelineLite(),
+            slideOutContent = slideOut.find('.card-content'),
+            slideInContent = slideIn.find('.card-content'),
+            slideOutImg = slideOut.find('.card-img'),
+            slideInImg = slideIn.find('.card-img'),
+            index = slideIn.index(),
+            size = $homeSlide.length;
+
+            if(slideIn.length !== 0) {
+            t1
+            .set(slideIn, {autoAlpha: 1, className: '+=active'})
+            .set(slideOut, {className: '-=active'})
+            .to(slideOutContent, 0.65, {y: "-=40px", ease: Power3.easeInOut}, 0)
+            .to(slideOutImg, 0.65, {backgroundPosition :'top', ease: Power3.easeInOut}, 0)
+            .to(slideInAll, 1, {y: "+=100%", ease: Power3.easeInOut}, 0)
+            .fromTo(slideInContent, 0.65, {y: '+=40px'}, {y : 0, ease: Power3.easeInOut}, "-=0.7")
+            .fromTo(slideInImg, 0.65, {backgroundPosition: 'bottom'}, {backgroundPosition: 'top', ease: Power3.easeInOut}, '-=0.7')
+            }
+
+            TweenMax.set($slideNavPrev, {autoAlpha: 1});
+
+            if(index === 0){
+                  TweenMax.to($slideNavPrev, 0.3, {autoAlpha: 0.2, ease:Linear.easeNone});
+            }
+      };
+
+      $slideNavPrev.click(function(e) {
+            e.preventDefault();
+
+            var slideOut = $('.slide.active'),
+            slideIn = $('.slide.active').prev('.slide'),
+            slideInAll = $('.slide');
+
+            goToPrevSlide(slideOut, slideIn, slideInAll);
+      
+      });
+
+
+      </script>
+</body>
+</html>

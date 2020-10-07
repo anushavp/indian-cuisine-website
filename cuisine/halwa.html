@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<title>gajar ka halwa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel = "stylesheet" href = "halwa.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<style>
+ html {height: 100%}
+h1,h2,h3,h4,h5,h6,p {font-family: "Amatic SC", sans-serif}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class ="menu-bar">
+     <ul>
+         <li><a href="index.html">MAIN</a></li>
+         <li class= "active" ><a href ="home.html"><i class="fa fa-home" ></i>HOME</a></li>
+        
+         
+         
+         
+         <li><a href = "#"><i class="fa fa-caret-square-o-down"></i>FOOD STREETS</a>
+         
+          <div class="sub-menu-1">
+             <ul>
+                <li><a href="bangalore.html">Bangalore</a></li>
+             <li><a href="goa.html">Goa</a></li>
+             <li><a href="#">Chennai</a></li>
+             <li><a href="#">Pondicherry</a></li>
+             
+             
+             </ul>
+             </div>
+         
+         <li ><a href = "#"><i class="fa fa-cutlery" ></i>CUISINES</a>
+             
+             
+             
+             
+         <div class="sub-menu-1">
+             <ul>
+                <li><a href="north.html">North Indian</a></li>
+             <li><a href="west.html">Western Indian</a></li>
+             <li><a href="east.html">Eastern Indian</a></li>
+             <li><a href="south.html">South Indian</a></li>
+             
+             
+             </ul>
+             </div>
+          </li>
+        
+         
+         
+         
+         
+         
+         
+        
+           
+              </ul>
+       </div>
+       
+
+<!-- Header with image -->
+
+
+<!-- Menu Container -->
+    
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">GAJAR KA HALWA</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">RECIPE</div>
+      </a>
+     
+
+    <div id="Pizza" class="w3-container menu w3-padding-20 w3-white">
+      <h1><b>Fact of the Day</b> </h1>
+      <p class="w3-text-blue">carrots are considered to be world’s healthiest vegetable. moreover, carrots improve the vision and reduces the risk of cancer. it also slows down the ageing and gives a glow to your skin.</p>
+      <hr>
+   
+      <h1><b>INGREDIENTS:</b> <span class="w3-right w3-tag w3-dark-grey w3-round">cal.386</span></h1>
+      <p class="w3-text-blue"> 
+1 kg or 4 cup grated carrot / gajar
+4 cup full cream milk
+1 cup sugar
+2 tsp ghee
+8-10 unsalted whole or chopped cashews
+8-10 unsalted roasted almonds
+12-15 golden raisins</p>
+      <hr>
+       
+      
+        </div>
+     
+        
+      <br>
+   <div class=" w3-center w3-animate-zoom">
+  <h1 class="w3-center w3-jumbo" style="margin-bottom:85px">RECIPE VIDEO</h1>
+  <video width="900" height="600" controls>
+        <source src="halwa.mp4" type="video/mp4">
+     
+       </video>
+</div>
+<!-- About Container -->
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+      </div>
+    </div>
+    </div>
+</body>
+</html>

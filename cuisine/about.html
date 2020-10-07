@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<title>about us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel = "stylesheet" href = "about.css">
+        <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="footer, address, phone, icons" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<style>
+p2,p3,p4 {font-family: "Lucida Console", monospace;font-size:18px;}
+html {
+  height: 220%;
+  color: white;
+  line-height: 1.8;
+    
+}
+
+/* Create a Parallax Effect */
+.
+
+/* First image (Logo. Full height) */
+
+
+.w3-wide {letter-spacing: 5px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+ <div class ="menu-bar">
+     <ul>
+         <li><a href="index.html">MAIN</a></li>
+         <li class= "active" ><a href ="home.html"><i class="fa fa-home" ></i>HOME</a></li>
+        
+         
+         
+         
+         <li><a href = "#"><i class="fa fa-caret-square-o-down"></i>FOOD STREETS</a>
+         
+          <div class="sub-menu-1">
+             <ul>
+                <li><a href="bangalore.html">Bangalore</a></li>
+             <li><a href="goa.html">Goa</a></li>
+             <li><a href="#">Chennai</a></li>
+             <li><a href="#">Pondicherry</a></li>
+             
+             
+             </ul>
+             </div>
+         
+         <li ><a href = "#"><i class="fa fa-cutlery" ></i>CUISINES</a>
+             
+             
+             
+             
+         <div class="sub-menu-1">
+             <ul>
+                <li><a href="north.html">North Indian</a></li>
+             <li><a href="west.html">Western Indian</a></li>
+             <li><a href="east.html">Eastern Indian</a></li>
+             <li><a href="south.html">South Indian</a></li>
+             
+             
+             </ul>
+             </div>
+          </li>
+        
+         
+         
+         
+         
+         
+         
+        
+           
+              </ul>
+       </div>
+       
+
+  <!-- Navbar on small screens -->
+  <div id="" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="" class="w3-bar-item w3-button" onclick="toggleFunction()">home</a>
+    <a href="" class="w3-bar-item w3-button" onclick="toggleFunction()">foodstreets</a>
+    <a href="" class="w3-bar-item w3-button" onclick="toggleFunction()">cuisines</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+
+
+<!-- First Parallax Image with Logo Text -->
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    
+    <div class ="hero">
+  <h1 font-size= "35px" color="white">ABOUT US</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <p2>We have created a fictional website for the cuisine of India is one of the world's most diverse cuisines, characterized by its sophisticated and subtle use of the many spices, vegetables, grains and fruits grown across India. The cuisine of each geographical region includes a wide assortment of dishes and cooking techniques reflecting the varied demographics of the ethnically diverse Indian subcontinent. India's religious beliefs and culture have played an influential role in the evolution of its cuisine</p2>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      
+      <img src="bg3.jpg" class="w3-round w3-image  w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p4>website that lets visitors explore the rich and varied cuisines of Indian and also learn about its culinary heritage. The website has a rich graphical presentation layer that allows visitors to navigate through various culinary regions of India.  The website is the one place to get to know about a regions food cuisine, get its recipe, watch tutorial videos and get to know the places to savour them. the website is designed with ease of usability in mind i.e. there is no need to sign up or have pre knowledge of how to navigate a website. The website is designed to be rich in visuals yet easy to read and indulge in the great history of Indian food cuisines.</p4>
+    </div>
+  </div>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+    </div>
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="logo.jpg">
+				<h3>Indian<span>CUISINES</span></h3>
+
+				<p class="footer-links">
+					
+					
+					<a href="about.html">About</a>
+					|
+					<a href="">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2019 INDIAN CUISINES</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>alpha college
+						 hennur baglur main road</span>
+						Bangalore-960054</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 8296598887</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="anushavp97@yahoo.com">anushavp97@yahoo.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
